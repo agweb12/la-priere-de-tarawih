@@ -90,12 +90,12 @@ require 'vendor/autoload.php';
                 //configuration
                 $mailCommande->isSMTP();
                 //Configuration du SMTP
-                $mailCommande->Host         = 'mail03.lwspanel.com';
+                $mailCommande->Host         = '';
                 $mailCommande->SMTPAuth     = true;
-                $mailCommande->Username     = 'contact@laprieredetarawih.com';
-                $mailCommande->Password     = 'Metmati121267@';
+                $mailCommande->Username     = '';
+                $mailCommande->Password     = '';
                 $mailCommande->SMTPSecure   = PHPMailer::ENCRYPTION_SMTPS;
-                $mailCommande->Port         = 465;
+                $mailCommande->Port         = ;
                 //Charset
                 $mailCommande->CharSet = 'utf-8';
                 // Expéditeur
