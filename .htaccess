@@ -1,0 +1,10 @@
+#------------- le serveur doit suivre les liens symboliques
+Options +FollowSymlinks
+
+#------------- demarrage du moteur de réécriture d'url
+RewriteEngine on
+
+#------------- règles de réécriture d'url
+RewriteRule ^index     index.php
+RewriteRule ^confirmation-commande     confirmation-commande-livre.php
+RewriteRule ^confirmation-telechargement     confirmation-telechargement-livre.php

@@ -1,0 +1,1569 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Raleway:wght@200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body
+{
+    scroll-snap-type: y mandatory;
+}
+h1
+{
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #121212;
+    letter-spacing: 1px;
+    font-size: 36px;
+    text-shadow: none;
+
+}
+h2
+{
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #040e2b;
+    letter-spacing: 1px;
+    font-size: 36px;
+    background: rgba(255, 255, 255, 0.93);
+    text-align: center;
+    padding: 10px 10px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 12px whitesmoke;
+}
+h3
+{
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #12c757;
+    letter-spacing: 0.5px;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+p
+{
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    color: #121212;
+    letter-spacing: 0.2px;
+    font-size: 16px;
+}
+button
+{
+    font-family: 'Raleway';
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+}
+button.primary
+{
+    background: linear-gradient(166deg, #1ece76, #12c757, #12863a);
+    color: white;
+}
+button.secondary
+{
+    background-color: #040e2b;
+    color: white;
+}
+button.danger
+{
+    background-color: rgb(255, 30, 30);
+}
+a
+{
+    text-decoration: none;
+    text-transform: none;
+    font-family: 'Raleway';
+}
+
+/*---------------------------     DEBUT HEADER     ---------------------------------*/
+#header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 80px 10px 80px;
+    background-image: url("assets/images/livre-tarawih.png"), url("assets/images/homme-tarawih.png"),url("assets/images/etoiles.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 20%, 0% 18%,100%;
+    background-size: 50%, 25% ,cover;
+    background-blend-mode: none, none, none;
+    background-attachment: scroll;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.171);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    transition: 0.7s;
+}
+#header:hover
+{
+    padding: 80px 80px 80px 80px;
+    background-repeat: no-repeat;
+    background-position: 100% 20%,10% 10%, 100%;
+    background-size: 70% ,40% ,cover;
+}
+
+#header a img
+{
+    max-width: 66px;
+    height: auto;
+    padding: 0 0;
+    transition: 0.5s;
+}
+#header a img:hover
+{
+    transform: scale(120%) translate(10%, 15%);
+}
+#navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li
+{
+    list-style: none;
+    padding: 10px 20px;
+    margin: 10px 12px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px #21212167;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    transition: 0.5s;
+}
+#navbar li:hover
+{
+    text-shadow: none;
+    letter-spacing: 0.2em;
+    background: #12c757ec;
+    border-radius: 12px;
+    box-shadow: 0px 0px 7px #12c757;
+    transform: scale(108%);
+}
+
+#navbar li a
+{
+    position: relative;
+    font-weight: 900;
+    font-size: 16px;
+    z-index: 1;
+    text-decoration: none;
+    color: #12c757;
+
+}
+#navbar li:hover a
+{
+    color: white;
+    text-shadow: 0px 3px 5px rgba(21, 21, 21, 0.526);
+}
+
+#navbar li i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#navbar li i::before
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    border: 0px solid white;
+    border-radius: 0%;
+    width: 0%;
+    left: 10%;
+    height: 0px;
+    background: white;
+    transition: 0.5s;
+}
+#navbar li i::after
+{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    border: 0px solid white;
+    border-radius: 0%;
+    width: 0%;
+    right: 10%;
+    height: 0px;
+    background: white;
+    transition: 0.5s;
+}
+#navbar li:hover i::before
+{
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    left: 5%;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px white;
+}
+#navbar li:hover i::after
+{
+    width: 90%;
+    margin-bottom: 3px;
+    height: 3px;
+    right: 5%;
+    border-radius: 50%;
+    box-shadow: 0px -2px 5px white;
+}
+
+#mobile
+{
+    display: none;
+    align-items: center;
+}
+
+#close
+{
+    display: none;
+}
+
+/*---------------------------     FIN HEADER     ---------------------------------*/
+/*---------------------------- FORMULAIRE -----------------------------------*/
+#formcommandeParticulierA,
+#formcommandeParticulierB,
+#formcommandeAssoc
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn.btn-primary
+{
+    margin: 10px;
+}
+/*---------------------------     DEBUT ACCEUIL     ---------------------------------*/
+
+
+#accueil.container-fluid
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("assets/images/objet-tarawih.png"), white;
+    background-position: 0% 100%, 100%;
+    background-repeat: no-repeat;
+    background-size: 40%, 100%;
+    background-attachment: fixed;
+    scroll-margin-top: 200px;
+
+}
+#accueil .row-accueil
+{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+#accueil .row-accueil .box-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 700px;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background: rgba(254, 254, 254, 0.833);
+}
+#accueil .row-accueil .box-container p.paragraphe
+{
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 16px;
+}
+#accueil .row-accueil .box-container a button.primary
+{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px #1212126e;
+    box-shadow: 0px 3px 7px #23232392;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+#accueil .row-accueil .box-container a button.primary:hover
+{
+    transform: scale(120%);
+    text-shadow: none;
+    box-shadow: 0px 3px 12px #12c757;
+}
+#accueil .row-accueil .gallery
+{
+    --s: 650px; /* control the size */
+    display: grid;
+    width: var(--s);
+    aspect-ratio: 1;
+    overflow: hidden;
+    padding: calc(var(--s)/20);
+    border-radius: 50%;
+    position: relative;
+    clip-path: circle(49.5%); /* to avoid a few glitch cause by overflow: hidden */
+    transition: 0.5s;
+}
+#accueil .row-accueil .gallery:hover
+{
+    --s: 800px; /* control the size */
+}
+#accueil .row-accueil .gallery::after 
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: inherit;
+    border-radius: inherit;
+    background: repeating-conic-gradient(white 0 10deg,rgb(242, 242, 242) 0 45deg);
+    mask: initial;
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+#accueil .row-accueil .gallery > img {
+    grid-area: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    transform-origin: 50% 120.7%;
+}
+  #accueil .row-accueil .gallery::after,
+  #accueil .row-accueil .gallery > img 
+{
+    animation: m 24s infinite cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+#accueil .row-accueil .gallery > img:nth-child(2) {animation-delay: -6s}
+#accueil .row-accueil .gallery > img:nth-child(3) {animation-delay: -12s}
+#accueil .row-accueil .gallery > img:nth-child(4) {animation-delay: -18s}
+
+@keyframes m 
+{
+    0%,3%    {transform: rotate(0)}
+    22%,27%  {transform: rotate(-90deg)}
+    47%,52%  {transform: rotate(-180deg)}
+    72%,77%  {transform: rotate(-270deg)}
+    98%,100% {transform: rotate(-360deg)}  
+}
+
+/*-------------------- COMMANDE ----------------------------*/
+
+#commande,
+#telechargement,
+#reseaux,
+#resume,
+#contact
+{
+    scroll-margin-top: 200px;
+}
+#commande .row-commande
+{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin: 120px 0px 0px 0px;
+}
+#commande .row-commande .box-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 750px;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background: none;
+    transition: 0.5s;
+}
+#commande .row-commande .box-container h2
+{
+    transition: 0.5s;
+}
+#commande .row-commande .box-container h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#commande .row-commande .box-container h2 span
+{
+    font-weight: 900;
+    font-size: 28px;
+    color: #12c757;
+    background: white;
+    box-shadow: 0px 1px 7px #c8c8c8;
+    text-align: center;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+#commande .row-commande .box-container .box1
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition: 0.5s;
+}
+#commande .row-commande .box-container .box1:hover
+{
+    box-shadow: 0px -45px 70px #1212123e;
+    transform: translateY(-20px);
+}
+
+
+#commande .row-commande .box-container button.primary
+{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px #1212126e;
+    box-shadow: 0px 3px 7px #23232392;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+#commande .row-commande .box-container button.primary:hover
+{
+    transform: scale(104%);
+    text-shadow: none;
+    box-shadow: 0px 3px 12px #12c757;
+}
+#commande .row-commande .box-container ul
+{
+    list-style: circle inside;
+    color: rgb(57, 57, 57);
+}
+#commande .row-commande .box-container ul li
+{
+    font-family: 'Raleway';
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px #cecece8d;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+#commande .row-commande .box-container ul li:hover
+{
+    background: linear-gradient(166deg, #1ece76, #12c757, #12863a);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 17px #5858588d;
+}
+#commande .row-commande .box-img img.commande
+{
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    filter: drop-shadow(10px 39px 12px #2020208b);
+    transition: 0.5s;
+}
+#commande .row-commande .box-img img.commande:hover
+{
+    width: 600px;
+    height: 600px;
+    filter: drop-shadow(21px 21px 30px #12c75795);
+}
+
+
+/****************** TELECHARGEMENT **********************/
+
+#telechargement .row-telechargement-fr
+{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin: 120px 0px 0px 0px;
+
+}
+#telechargement .row-telechargement-fr .box-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 750px;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background: none;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+}
+#telechargement .row-telechargement-fr .box-container h2
+{
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-fr .box-container h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#telechargement .row-telechargement-fr .box-container h2 span.material-symbols-outlined
+{
+    font-weight: 900;
+    font-size: 28px;
+    color: #12c757;
+    background: white;
+    box-shadow: 0px 1px 7px #c8c8c8;
+    text-align: center;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+#telechargement .row-telechargement-fr .box-container .box1
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition:0.5s;
+}
+#telechargement .row-telechargement-fr .box-container .box1:hover
+{
+    box-shadow: 0px -45px 70px #1212123e;
+    transform: translateY(-20px);
+}
+#telechargement .row-telechargement-fr .box-container a button.primary
+{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px #1212126e;
+    box-shadow: 0px 3px 7px #23232392;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-duration: 0.5s;
+}
+#telechargement .row-telechargement-fr .box-container a button.primary:hover
+{
+    transform: scale(104%);
+    text-shadow: none;
+    box-shadow: 0px 3px 12px #12c757;
+}
+#telechargement .row-telechargement-fr .box-container ul
+{
+    list-style: circle inside;
+    color: rgb(57, 57, 57);
+}
+#telechargement .row-telechargement-fr .box-container ul li
+{
+    font-family: 'Raleway';
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px #cecece8d;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-fr .box-container ul li:hover
+{
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 17px #5858588d;
+}
+#telechargement .row-telechargement-fr .box-img img.telechargement
+{
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    filter: drop-shadow(10px 39px 12px #2020208b);
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-fr .box-img img.telechargement:hover
+{
+    width: 600px;
+    height: 600px;
+    filter: drop-shadow(21px 21px 30px #2020208b);
+}
+
+/*------------------ TELECHARGEMENT LIVRE TURC ------------------------*/
+
+#telechargement .row-telechargement-turc
+{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin: 120px 0px 0px 0px;
+
+}
+#telechargement .row-telechargement-turc .box-img img.telechargement
+{
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    filter: drop-shadow(10px 39px 12px #2020208b);
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-turc .box-img img.telechargement:hover
+{
+    width: 600px;
+    height: 600px;
+    filter: drop-shadow(21px 21px 30px #2020208b);
+}
+#telechargement .row-telechargement-turc .box-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 750px;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background: none;
+}
+#telechargement .row-telechargement-turc .box-container h2
+{
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-turc .box-container h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#telechargement .row-telechargement-turc .box-container h2 span.material-symbols-outlined
+{
+    font-weight: 900;
+    font-size: 28px;
+    color: #12c757;
+    background: white;
+    box-shadow: 0px 1px 7px #c8c8c8;
+    text-align: center;
+    padding: 0px 10px;
+    border-radius: 30px;
+}
+#telechargement .row-telechargement-turc .box-container .box1
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 12px 20px 50px 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition: 0.5s;
+}
+#telechargement .row-telechargement-turc .box-container .box1:hover
+{
+    box-shadow: 0px -45px 70px #1212123e;
+    transform: translateY(-20px);
+}
+#telechargement .row-telechargement-turc .box-container a button.primary
+{
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px #1212126e;
+    box-shadow: 0px 3px 7px #23232392;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+#telechargement .row-telechargement-turc .box-container a button.primary:hover
+{
+    transform: scale(104%);
+    text-shadow: none;
+    box-shadow: 0px 3px 12px #12c757;
+}
+#telechargement .row-telechargement-turc .box-container ul
+{
+    list-style: circle inside;
+    color: rgb(57, 57, 57);
+}
+#telechargement .row-telechargement-turc .box-container ul li
+{
+    font-family: 'Raleway';
+    width: fit-content;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 7px #cecece8d;
+    margin-bottom: 15px;
+}
+
+
+
+/*----------------------------- RESEAUX --------------------------------*/
+#reseaux
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#reseaux h2
+{
+    transition: 0.5s;
+}
+#reseaux h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#reseaux p.slogan
+{
+    border-radius: 5px;
+    padding: 20px;
+    transition: 0.5s;
+}
+#reseaux p.slogan:hover
+{
+    transform: 120%;
+    background: white;
+    box-shadow: 0px 20px 21px #12c7579c;
+    transform: translateY(-5px);
+}
+#reseaux .row-reseaux
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    padding: 40px;
+    box-shadow: 0px 0px 40px rgba(92, 92, 92, 0.533);
+    background: white;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+#reseaux .row-reseaux:hover
+{
+    transform: scale(102%);
+    box-shadow: 0px -20px 40px rgba(92, 92, 92, 0.533);
+
+}
+#reseaux .row-reseaux .box2-col
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#reseaux .row-reseaux .box2-col .box2-row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background: none;
+    transition: 0.5s;
+}
+#reseaux .row-reseaux .box2-col .box2-row:hover
+{
+    box-shadow: 0px 5px 16px #c5c5c5c2;
+    transform: scale(104%);
+}
+#reseaux .row-reseaux .box2-col .box2-row.fb
+{
+    background: rgb(3, 92, 175);
+}
+#reseaux .row-reseaux .box2-col .box2-row.youtube
+{
+    background: rgb(255, 59, 59);
+}
+#reseaux .row-reseaux .box2-col .box2-row.twitter
+{
+    background: rgb(33, 154, 246);
+}
+#reseaux .row-reseaux .box2-col .box2-row.telegram
+{
+    background: rgb(19, 151, 227);
+}
+#reseaux .row-reseaux .box2-col .box2-row.soundcloud
+{
+    background: rgb(229, 171, 11);
+}
+#reseaux .row-reseaux .box2-col .box2-row.instagram
+{
+    background: linear-gradient(140deg, #cc2dec, #d8500c ,rgb(205, 199, 18));
+}
+#reseaux .row-reseaux .box2-col .box2-row ion-icon
+{
+    margin: 10px;
+    color: white;
+    width: 36px;
+    height: 36px;
+}
+#reseaux .row-reseaux .box2-col .box2-row p
+{
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: white;
+}
+#reseaux .row-reseaux .box2-col p
+{
+    margin: 10px;
+    font-size: 18px;
+    font-family: 'Raleway';
+}
+
+/*------------------------------- RESUME -------------------------------*/
+
+#resume
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+#resume h2
+{
+    transition: 0.5s;
+}
+#resume h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#resume .box3-row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#resume .box3-row .resume-col
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition: 0.5s;
+}
+#resume .box3-row .resume-col:hover
+{
+    box-shadow: 0px -45px 70px #1212123e;
+    transform: translateY(-20px);
+}
+#resume .box3-row .resume-col p
+{
+    text-align: justify;
+}
+#resume .box3-row .descriptif-col
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition: 0.5s;
+}
+#resume .box3-row .descriptif-col:hover
+{
+    box-shadow: 0px -45px 70px #1212123e;
+    transform: translateY(-20px);
+}
+#resume .box3-row .descriptif-col ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: none;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+#resume .box3-row .descriptif-col ul li:hover
+{
+    box-shadow: 5px 7px 12px #12121253;
+}
+#resume .box3-row .descriptif-col ul li p
+{
+    font-size: 16px;
+    font-family: 'Raleway';
+    align-self: center;
+    vertical-align:middle;
+}
+#resume .box3-row .descriptif-col ul li i::before
+{
+    content:"";
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    left: -5px;
+    top: 0%;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    background: white;
+    transition: 0.5s;
+}
+#resume .box3-row .descriptif-col ul li i::after
+{
+    content:"";
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 0%;
+    height: 0px;
+    box-shadow: none;
+    z-index: 1;
+    background: white;
+    transition: 0.5s;
+}
+#resume .box3-row .descriptif-col ul li:hover i::before
+{
+    left: -5px;
+    width: 7px;
+    height: 50px;
+    background: #12c757;
+}
+#resume .box3-row .descriptif-col ul li:hover i::after
+{
+    width: 100%;
+    height: 9px;
+    box-shadow: 0px -5px 7px #8d8d8d28;
+    background: #12c757;
+}
+#resume .box3-row .descriptif-col ul li p span
+{
+    font-weight: bold;
+}
+
+/*---------------------------- LIVRAISON ------------------------------ */
+
+#livraison
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+#livraison h2
+{
+    transition: 0.5s;
+}
+#livraison h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#livraison .box4-row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#livraison .box4-row .livraison-col
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 280px;
+    max-width: 300px;
+    padding: 20px;
+    box-shadow: 0px 0px 24px #F5F5F5;
+    margin: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.93);
+    transition: 0.5s;
+}
+#livraison .box4-row .livraison-col:hover
+{
+    box-shadow: 0px 45px 70px #1245c733;
+    transform: translateY(-20px);
+}
+#livraison .box4-row .livraison-col .box-h3
+{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #12c757d6;
+}
+#livraison .box4-row .livraison-col .box-h3 h3
+{
+    font-family: 'Raleway';
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 21px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+#livraison .box4-row .livraison-col .box-list
+{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 5px 3px #eaeaea;
+    transition: 0.3s;
+}
+#livraison .box4-row .livraison-col .box-list:hover
+{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f7f7f7;
+    box-shadow: 3px 3px 0px 3px #eaeaea;
+}
+#livraison .box4-row .livraison-col .box-list ul li
+{
+    position: relative;
+    list-style: none;
+    padding: 5px;
+    box-shadow: none;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+#livraison .box4-row .livraison-col .box-list ul li p
+{
+    font-family: 'Raleway';
+}
+#livraison .box-utile
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    padding: 20px 20px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0px 3px #eaeaea;
+}
+#livraison .box-utile p
+{
+    font-family: 'Raleway';
+}
+/*---------------------------- QUI SOMMES NOUS ? ------------------------------ */
+
+#nousconnaitre
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#nousconnaitre h2
+{
+    transition: 0.5s;
+}
+#nousconnaitre h2:hover
+{
+    box-shadow: 0px 45px 70px #12121274;
+    transform: translateY(-5px);
+}
+#nousconnaitre .nous-row
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    background: whitesmoke;
+    transition: 0.5s;
+}
+#nousconnaitre .nous-row:hover
+{
+    transform: scale(102%);
+    box-shadow: 0px 12px 12px #12121221;
+}
+#nousconnaitre .nous-row img.logo
+{
+    max-width: 150px;
+    height: auto;
+    padding: 0 0;
+    margin: 30px;
+    transition: 0.5s;
+}
+#nousconnaitre .nous-row img.logo:hover
+{
+    transform: scaleX(104%);
+}
+#nousconnaitre .nous-row .nous-col
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+}
+#nousconnaitre .nous-row .nous-col p
+{
+    font-family: 'Raleway';
+    text-align: justify;
+}
+
+
+/*-------------------------------- FOOTER ------------------------------*/
+footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0px -12px 30px #a7a7a790;
+    background-image: url("assets/images/livre-tarawih.png"), url("assets/images/objet-tarawih.png"),url("assets/images/etoiles.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 20%, 0% 100%,100%;
+    background-size: 25%, 30% ,cover;
+    background-blend-mode: none, none, none;
+    background-attachment: scroll;
+    transition: 0.5s;
+}
+footer:hover
+{
+    background-image: url("assets/images/livre-tarawih.png"), url("assets/images/objet-tarawih.png"),url("assets/images/etoiles.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 20%, 0% 100%,100%;
+    background-size: 35%, 35% ,cover;
+}
+footer .col-contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.949);
+}
+footer .col-contact a img.logo
+{
+    max-width: 100px;
+    height: auto;
+    padding: 0 0;
+    margin-bottom: 30px;
+}
+footer .col-contact h2
+{
+    font-size: 24px;
+    text-align: center;
+    margin-left: 0px;
+    padding: 0px;
+    background:none;
+    box-shadow: none;
+}
+footer .col-contact h2 span.material-symbols-outlined
+{
+    font-size: 28px;
+    text-align: left;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+footer .col-contact p
+{
+    font-family: 'Raleway';
+    margin: 0 0 8px 0;
+    color: #999;
+}
+footer .col-contact p strong
+{
+    color: #999;
+}
+
+footer .col
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.949);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 10px;
+    max-width: fit-content;
+    width: 100%;
+}
+footer .col h2 span.material-symbols-outlined
+{
+    font-size: 28px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 0px;
+}
+footer .col p
+{
+    font-family: 'Raleway';
+    margin: 0 0 8px 0;
+    color: #999;
+}
+footer .col p strong
+{
+    color: #999;
+}
+footer .col a
+{
+    font-family: 'Raleway';
+    text-decoration: none;
+    color: #999;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+footer .col a:hover
+{
+    color: #12c757;
+    transform: scaleX(108%);
+}
+i#common
+{
+    font-size: 16px;
+    color: whitesmoke;
+    margin: 15px 0 20px 0;
+    transition: 0.5s;
+}
+i#common:hover
+{
+    transform: scaleX(120%);
+    margin: 15px 0 20px 0;
+}
+.copyright p
+{
+    font-family: 'Raleway';
+    color: white;
+}
+.copyright i
+{
+    font-size: 28px;
+    margin: 3px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.copyright i:hover
+{
+    color: #12c757;
+    transform: scaleX(108%);
+}
+footer .copyright
+{
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+footer .copyright:hover
+{
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (max-width:1000px) 
+{
+    #header
+    {
+        justify-content: space-between;
+    }
+    #navbar
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-image: url("assets/images/livre-tarawih.png"), url("assets/images/logo-256.png"),url("assets/images/etoiles.jpg");
+        background-repeat: no-repeat;
+        background-position: 100% 100%, 90% 10%,100%;
+        background-size: 100%, 25% ,cover;
+        padding: 80px 0 0 0px;
+        transition: 0.3s;
+    }
+    #navbar.active
+    {
+        right: 0px;
+        box-shadow: -40px 0px 60px rgba(101, 101, 101, 0.108);
+    }
+    #navbar li 
+    {
+        margin-bottom: 25px;
+    }
+    #mobile
+    {
+    cursor: pointer;
+    display: flex;
+    align-items: space-between;
+    transition: 0.5s;
+    border-radius: 10px;
+    }
+    #mobile:hover
+    {
+        color: #12c757;
+        background-color: white;
+        border-radius: 30px;
+    }
+    #mobile i 
+    {
+        font-size: 24px;
+        padding: 10px;
+        color: white;
+        transition: 0.5s;
+    }
+    #mobile:hover i
+    {
+        color: #12c757;
+    }
+    #close
+    {
+        cursor: pointer;
+        display: initial;
+        position: absolute;
+        padding: 10px;
+        top: 30px;
+        left: 30px;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+    #close:hover
+    {
+        color: #12c757;
+        background-color: white;
+        border-radius: 30px;
+    }
+    #accueil.container-fluid
+    {
+        margin-top: 100px;
+        margin-bottom: 30px;
+        height: 100%;
+    }
+    #accueil .row-accueil .gallery
+    {
+        --s: 500px; /* control the size */
+    }
+    #accueil .row-accueil .gallery:hover
+    {
+        --s: 400px; /* control the size */
+    }
+    #commande .row-commande .box-img img.commande
+    {
+        width: 500px;
+        height: 500px;
+    }
+    #commande .row-commande .box-img img.commande:hover
+    {
+        width: 400px;
+        height: 400px;
+    }
+    #telechargement .row-telechargement-fr .box-img img.telechargement
+    {
+        width: 500px;
+        height: 500px;
+    }
+    #telechargement .row-telechargement-fr .box-img img.telechargement:hover
+    {
+        width: 400px;
+        height: 400px;
+    }
+    #telechargement .row-telechargement-turc .box-img img.telechargement
+    {
+        width: 500px;
+        height: 500px;
+    }
+    #telechargement .row-telechargement-turc .box-img img.telechargement:hover
+    {
+        width: 400px;
+        height: 400px;
+    }
+    #resume .box3-row
+    {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:678px) 
+{
+    #accueil .row-accueil
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    #commande .row-commande
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+    }
+    #telechargement .row-telechargement-fr
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+    }
+    #telechargement .row-telechargement-turc
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+    }
+    #nousconnaitre .nous-row
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+    }
+    #accueil .row-accueil .box-container a button.primary
+    {
+        width: 100%;
+    }
+    #accueil .row-accueil .box-container a button.primary:hover
+    {
+        transform: scale(104%);
+    }
+    #accueil .row-accueil .gallery
+    {
+        --s: 300px; /* control the size */
+    }
+    #accueil .row-accueil .gallery:hover
+    {
+        --s: 280px; /* control the size */
+    }
+    #commande .row-commande .box-container button.primary
+    {
+        width: 100%;
+    }
+    #commande .row-commande .box-img img.commande
+    {
+        width: 300px;
+        height: 300px;
+    }
+    #commande .row-commande .box-img img.commande:hover
+    {
+        width: 280px;
+        height: 280px;
+    }
+    #telechargement .row-telechargement-fr .box-container a button.primary
+    {
+        width: 100%;
+    }
+    #telechargement .row-telechargement-fr .box-img img.telechargement
+    {
+        width: 300px;
+        height: 300px;
+    }
+    #telechargement .row-telechargement-fr .box-img img.telechargement:hover
+    {
+        width: 280px;
+        height: 280px;
+    }
+    #telechargement .row-telechargement-turc .box-img img.telechargement
+    {
+        width: 300px;
+        height: 300px;
+    }
+    #telechargement .row-telechargement-turc .box-img img.telechargement:hover
+    {
+        width: 280px;
+        height: 280px;
+    }
+    #telechargement .row-telechargement-turc .box-container a button.primary
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width:477px) 
+{
+    
+}
