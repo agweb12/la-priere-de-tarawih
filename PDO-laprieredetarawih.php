@@ -2,10 +2,7 @@
 
 class Database
 {
-    private static $dbHost = "91.216.107.186";
-    private static $dbName = "lapri2034657";
-    private static $dbUser = "lapri2034657";
-    private static $dbUserPassword = "Metmati121267@";
+    
     
     private static $connection = null;
 
